@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas - RunMap BA</title>
+    
+    <link rel="icon" type="image/png" href="logo-icon.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="RunMap BA Logo" class="logo-image">
+                <span class="logo-text">RunMap BA</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="rutas.html">Rutas</a></li>
+                <li><a href="#retos">Retos</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rutas-hero">
+            <div class="rutas-hero-content">
+                <h1>Rutas de <span class="highlight">Running</span></h1>
+                <p>Explorá los mejores circuitos de Buenos Aires</p>
+            </div>
+        </section>
+
+        <section class="rutas-section">
+            <div class="rutas-container">
+                <div class="filters-sidebar">
+                    <h3>Filtros</h3>
+                    
+                    <div class="filter-group">
+                        <label>Barrio</label>
+                        <select id="filtroBarrio">
+                            <option value="todos">Todos los barrios</option>
+                            <option value="Palermo">Palermo</option>
+                            <option value="Puerto Madero">Puerto Madero</option>
+                            <option value="Recoleta">Recoleta</option>
+                            <option value="Belgrano">Belgrano</option>
+                            <option value="Costanera">Costanera</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Distancia</label>
+                        <select id="filtroDistancia">
+                            <option value="todas">Todas las distancias</option>
+                            <option value="0-5">0 - 5 km</option>
+                            <option value="5-10">5 - 10 km</option>
+                            <option value="10+">Más de 10 km</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Superficie</label>
+                        <select id="filtroSuperficie">
+                            <option value="todas">Todas</option>
+                            <option value="Asfalto">Asfalto</option>
+                            <option value="Tierra">Tierra</option>
+                            <option value="Mixta">Mixta</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-filter" id="btnFiltrar">Aplicar Filtros</button>
+                    <button class="btn-reset" id="btnLimpiar">Limpiar</button>
+                </div>
+
+                <div class="rutas-content">
+                    <div class="rutas-header">
+                        <h2>Todas las Rutas</h2>
+                        <button class="btn-add-ruta" id="btnAgregarRuta">+ Agregar Ruta</button>
+                    </div>
+
+                    <div class="rutas-grid" id="rutasGrid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RunMap BA - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+    <script src="rutas.js"></script>
+</body>
+</html>

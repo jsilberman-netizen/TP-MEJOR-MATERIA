@@ -1,5 +1,4 @@
-
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -341,6 +340,216 @@ footer {
 }
 
 
+.rutas-hero {
+    background-color: #0a0a0a;
+    padding: 4rem 5%;
+    text-align: center;
+    border-bottom: 2px solid #dc0000;
+}
+
+.rutas-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.rutas-hero-content p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.rutas-section {
+    background-color: #000;
+    padding: 3rem 5%;
+    min-height: 70vh;
+}
+
+.rutas-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filters-sidebar {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-left: 4px solid #dc0000;
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+}
+
+.filters-sidebar h3 {
+    color: #dc0000;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #0a0a0a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #dc0000;
+}
+
+.btn-filter {
+    width: 100%;
+    background-color: #dc0000;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: #ff0000;
+}
+
+.btn-reset {
+    width: 100%;
+    background-color: transparent;
+    color: #dc0000;
+    padding: 0.8rem;
+    border: 2px solid #dc0000;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    background-color: #dc0000;
+    color: #fff;
+}
+
+.rutas-content {
+    min-height: 500px;
+}
+
+.rutas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.rutas-header h2 {
+    color: #dc0000;
+    font-size: 2rem;
+}
+
+.btn-add-ruta {
+    background-color: #dc0000;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-add-ruta:hover {
+    background-color: #ff0000;
+}
+
+.rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.ruta-card {
+    background-color: #1a1a1a;
+    border-left: 4px solid #dc0000;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.ruta-card:hover {
+    transform: translateY(-5px);
+}
+
+.ruta-card h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.ruta-info {
+    margin-bottom: 1rem;
+}
+
+.ruta-info p {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.ruta-info p strong {
+    color: #fff;
+}
+
+.ruta-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.btn-edit {
+    flex: 1;
+    background-color: transparent;
+    color: #dc0000;
+    padding: 0.6rem;
+    border: 2px solid #dc0000;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #dc0000;
+    color: #fff;
+}
+
+.btn-delete {
+    flex: 1;
+    background-color: #dc0000;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ff0000;
+}
+
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -362,7 +571,6 @@ footer {
         display: block;
     }
 
-    /* Hero móvil */
     .hero-content h1 {
         font-size: 2.5rem;
     }
