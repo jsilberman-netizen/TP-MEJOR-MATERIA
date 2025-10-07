@@ -1,4 +1,6 @@
-
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ============================================ */
    * {
     margin: 0;
     padding: 0;
@@ -11,7 +13,9 @@ body {
     color: #fff;
 }
 
-
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
 header {
     background-color: #000;
     border-bottom: 2px solid #dc0000;
@@ -29,11 +33,22 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+}
+
+.logo-text {
     font-size: 1.8rem;
     font-weight: bold;
     color: #dc0000;
-    text-decoration: none;
 }
 
 .nav-links {
@@ -53,6 +68,7 @@ nav {
     color: #dc0000;
 }
 
+/* Menú hamburguesa para móviles */
 .menu-toggle {
     display: none;
     background: none;
@@ -62,7 +78,9 @@ nav {
     cursor: pointer;
 }
 
-
+/* ============================================
+   HERO SECTION
+   ============================================ */
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -107,7 +125,9 @@ nav {
     background-color: #ff0000;
 }
 
-
+/* ============================================
+   SECCIÓN DE CARACTERÍSTICAS
+   ============================================ */
 .features {
     padding: 5rem 5%;
     background-color: #0a0a0a;
@@ -122,7 +142,7 @@ nav {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -130,17 +150,24 @@ nav {
 
 .feature-card {
     background-color: #1a1a1a;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-left: 4px solid #dc0000;
-    transition: transform 0.3s;
+    transition: transform 0.3s, border-left 0.3s;
+    text-align: center;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    border-left: 6px solid #dc0000;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #fff;
 }
@@ -148,9 +175,145 @@ nav {
 .feature-card p {
     color: #bbb;
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
+/* ============================================
+   SECCIÓN CON IMAGEN Y OVERLAY
+   ============================================ */
+.image-section {
+    background-color: #000;
+    padding: 0;
+}
 
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 3rem 5%;
+    color: #fff;
+}
+
+.image-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dc0000;
+}
+
+.image-overlay p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+}
+
+/* ============================================
+   SECCIÓN DUAL (TEXTO + IMAGEN)
+   ============================================ */
+.dual-section {
+    background-color: #0a0a0a;
+    padding: 5rem 5%;
+}
+
+.dual-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.dual-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.dual-text p {
+    font-size: 1.1rem;
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.dual-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-secondary-custom {
+    background-color: transparent;
+    color: #dc0000;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: 2px solid #dc0000;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #dc0000;
+    color: #fff;
+}
+
+/* ============================================
+   SECCIÓN TIENDA PREVIEW
+   ============================================ */
+.shop-preview {
+    background-color: #000;
+    padding: 5rem 5%;
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.shop-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.shop-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.shop-text p {
+    font-size: 1.1rem;
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
     background-color: #000;
     border-top: 2px solid #dc0000;
@@ -159,8 +322,11 @@ footer {
     color: #888;
 }
 
-
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
 @media (max-width: 768px) {
+    /* Navegación móvil */
     .nav-links {
         position: fixed;
         right: -100%;
@@ -181,6 +347,7 @@ footer {
         display: block;
     }
 
+    /* Hero móvil */
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -189,7 +356,66 @@ footer {
         font-size: 1.1rem;
     }
 
+    /* Features móvil */
     .features h2 {
         font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Imagen section móvil */
+    .image-container {
+        height: 400px;
+    }
+
+    .image-overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .image-overlay p {
+        font-size: 1rem;
+    }
+
+    /* Dual section móvil */
+    .dual-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .dual-text h2 {
+        font-size: 2rem;
+    }
+
+    .dual-text p {
+        font-size: 1rem;
+    }
+
+    /* Shop preview móvil */
+    .shop-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .shop-text h2 {
+        font-size: 2rem;
+    }
+
+    .shop-text p {
+        font-size: 1rem;
+    }
+
+    /* Orden invertido en móvil para shop */
+    .shop-content {
+        direction: ltr;
+    }
+
+    .shop-image {
+        order: 1;
+    }
+
+    .shop-text {
+        order: 2;
     }
 }
