@@ -7,7 +7,6 @@
     
     <link rel="icon" type="image/png" href="logo-icon.png">
     
-    <!-- Lo de Bootstrap, lo dijo steve ultima clase. es esto? -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
@@ -87,8 +86,114 @@
                     <a href="rutas.html" class="btn-secondary-custom">Ver todas las rutas</a>
                 </div>
                 <div class="dual-image">
-                    <!-- CAMBIAR 'tu-imagen-2.jpg' por el nombre de tu imagen -->
                     <img src="running2.jpg" alt="Mapa de rutas en Buenos Aires">
+                </div>
+            </div>
+        </section>
+
+        <section class="retos-section" id="retos">
+            <div class="retos-container">
+                <h2>Retos Semanales</h2>
+                <p class="retos-intro">Desafiá tus límites con nuevos objetivos cada semana. Contactate! </p>
+                
+                <div class="retos-grid">
+                    <article class="reto-card">
+                        <div class="reto-header">
+                            <span class="reto-badge">Activo</span>
+                            <h3>Desafío 10K</h3>
+                        </div>
+                        <p>Completá 10 kilómetros en una sola corrida esta semana</p>
+                        <div class="reto-meta">
+                            <span>📅 Termina en 4 días</span>
+                            <span>👥 124 participantes</span>
+                        </div>
+                    </article>
+
+                    <article class="reto-card">
+                        <div class="reto-header">
+                            <span class="reto-badge">Activo</span>
+                            <h3>Explorador de Barrios</h3>
+                        </div>
+                        <p>Corré en 3 barrios diferentes esta semana</p>
+                        <div class="reto-meta">
+                            <span>📅 Termina en 4 días</span>
+                            <span>👥 87 participantes</span>
+                        </div>
+                    </article>
+
+                    <article class="reto-card">
+                        <div class="reto-header">
+                            <span class="reto-badge">Activo</span>
+                            <h3>Madrugador Runner</h3>
+                        </div>
+                        <p>Corré antes de las 7 AM durante 5 días</p>
+                        <div class="reto-meta">
+                            <span>📅 Termina en 4 días</span>
+                            <span>👥 56 participantes</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto-section" id="contacto">
+            <div class="contacto-container">
+                <h2>Contacto</h2>
+                <p class="contacto-intro">¿Tenés preguntas o sugerencias? Escribinos</p>
+                
+                <div class="contacto-content">
+                    <div class="contacto-info">
+                        <div class="info-item-contact">
+                            <span class="icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@runmapba.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item-contact">
+                            <span class="icon">📱</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>+54 9 11 1234-5678</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item-contact">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <p>Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item-contact">
+                            <span class="icon">🕐</span>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lun a Vie: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contacto-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -98,7 +203,7 @@
         <p>&copy; 2025 RunMap BA - Todos los derechos reservados</p>
     </footer>
 
-    <!-- Lo de Bootstrap, lo dijo steve ultima clase. es esto? -->
+     <!-- Lo de Bootstrap, lo dijo steve ultima clase. es esto? -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     
     <script src="script.js"></script>

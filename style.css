@@ -495,8 +495,8 @@ footer {
 
 
 .rutas-hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('running2.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('running3.jpeg');
     background-size: cover;
     background-position: center;
     padding: 6rem 5%;
@@ -507,7 +507,12 @@ footer {
 .rutas-hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    color: #fff;
+}
+
+.rutas-hero-content h1 .highlight {
+    color: #dc0000;
 }
 
 .rutas-hero-content p {
