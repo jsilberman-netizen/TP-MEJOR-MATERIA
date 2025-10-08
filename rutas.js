@@ -5,7 +5,10 @@ let rutas = [
         barrio: "Palermo",
         distancia: 6.5,
         superficie: "Asfalto",
-        dificultad: "Fácil"
+        dificultad: "Fácil",
+        imagen: "running1.jpg",
+        recorrido: "Recorrido circular alrededor de los 3 lagos de Palermo. Ideal para principiantes.",
+        realizada: false
     },
     {
         id: 2,
@@ -13,7 +16,10 @@ let rutas = [
         barrio: "Costanera",
         distancia: 12,
         superficie: "Asfalto",
-        dificultad: "Media"
+        dificultad: "Media",
+        imagen: "running2.jpg",
+        recorrido: "Ida y vuelta por toda la Costanera Norte. Vista al río, terreno llano.",
+        realizada: false
     },
     {
         id: 3,
@@ -21,7 +27,10 @@ let rutas = [
         barrio: "Puerto Madero",
         distancia: 8,
         superficie: "Tierra",
-        dificultad: "Fácil"
+        dificultad: "Fácil",
+        imagen: "running3.jpg",
+        recorrido: "Circuito por senderos de tierra dentro de la reserva. Rodeado de naturaleza.",
+        realizada: false
     },
     {
         id: 4,
@@ -29,7 +38,10 @@ let rutas = [
         barrio: "Recoleta",
         distancia: 4.5,
         superficie: "Asfalto",
-        dificultad: "Fácil"
+        dificultad: "Fácil",
+        imagen: "running4.jpg",
+        recorrido: "Plaza Francia, Biblioteca Nacional y vuelta. Perfecto para entrenamientos cortos.",
+        realizada: false
     },
     {
         id: 5,
@@ -37,7 +49,10 @@ let rutas = [
         barrio: "Palermo",
         distancia: 10,
         superficie: "Mixta",
-        dificultad: "Media"
+        dificultad: "Media",
+        imagen: "running1.jpg",
+        recorrido: "Combina asfalto y tierra. Recorre Rosedal, Planetario y lagos completos.",
+        realizada: false
     },
     {
         id: 6,
@@ -45,7 +60,76 @@ let rutas = [
         barrio: "Belgrano",
         distancia: 5,
         superficie: "Asfalto",
-        dificultad: "Fácil"
+        dificultad: "Fácil",
+        imagen: "running2.jpg",
+        recorrido: "Circuito por las históricas barrancas. Incluye subidas y bajadas moderadas.",
+        realizada: false
+    },
+    {
+        id: 7,
+        nombre: "Puerto Madero - Puente de la Mujer",
+        barrio: "Puerto Madero",
+        distancia: 7,
+        superficie: "Asfalto",
+        dificultad: "Fácil",
+        imagen: "running3.jpg",
+        recorrido: "Diques 1, 2, 3 y 4. Terreno completamente llano con excelente vista.",
+        realizada: false
+    },
+    {
+        id: 8,
+        nombre: "Parque Centenario",
+        barrio: "Caballito",
+        distancia: 3.5,
+        superficie: "Asfalto",
+        dificultad: "Fácil",
+        imagen: "running4.jpg",
+        recorrido: "Vueltas al parque. Ideal para intervalos y entrenamientos de velocidad.",
+        realizada: false
+    },
+    {
+        id: 9,
+        nombre: "Costanera Sur",
+        barrio: "Puerto Madero",
+        distancia: 6,
+        superficie: "Asfalto",
+        dificultad: "Fácil",
+        imagen: "running1.jpg",
+        recorrido: "Desde Puerto Madero hasta la Reserva Ecológica por la costanera.",
+        realizada: false
+    },
+    {
+        id: 10,
+        nombre: "Circuito Parque Tres de Febrero",
+        barrio: "Palermo",
+        distancia: 8.5,
+        superficie: "Asfalto",
+        dificultad: "Media",
+        imagen: "running2.jpg",
+        recorrido: "Gran circuito que incluye Rosedal, Planetario, Lagos y Hipódromo.",
+        realizada: false
+    },
+    {
+        id: 11,
+        nombre: "Avenida Figueroa Alcorta",
+        barrio: "Recoleta",
+        distancia: 9,
+        superficie: "Asfalto",
+        dificultad: "Media",
+        imagen: "running3.jpg",
+        recorrido: "Ida y vuelta desde Recoleta hasta Palermo por la avenida principal.",
+        realizada: false
+    },
+    {
+        id: 12,
+        nombre: "Ciudad Universitaria",
+        barrio: "Belgrano",
+        distancia: 5.5,
+        superficie: "Asfalto",
+        dificultad: "Fácil",
+        imagen: "running4.jpg",
+        recorrido: "Circuito universitario junto al río. Terreno llano y tranquilo.",
+        realizada: false
     }
 ];
 
@@ -65,17 +149,29 @@ function renderizarRutas(rutasParaMostrar) {
         const rutaCard = document.createElement('div');
         rutaCard.className = 'ruta-card';
         
+        const estadoRealizada = ruta.realizada ? '✓ Realizada' : 'Marcar como realizada';
+        const claseBoton = ruta.realizada ? 'btn-realizada-active' : 'btn-realizada';
+        
         rutaCard.innerHTML = `
-            <h3>${ruta.nombre}</h3>
-            <div class="ruta-info">
-                <p><strong>Barrio:</strong> ${ruta.barrio}</p>
-                <p><strong>Distancia:</strong> ${ruta.distancia} km</p>
-                <p><strong>Superficie:</strong> ${ruta.superficie}</p>
-                <p><strong>Dificultad:</strong> ${ruta.dificultad}</p>
+            <div class="ruta-imagen" onclick="verDetalleRuta(${ruta.id})" style="cursor: pointer;">
+                <img src="${ruta.imagen}" alt="${ruta.nombre}">
+                ${ruta.realizada ? '<span class="badge-realizada">✓ Completada</span>' : ''}
             </div>
-            <div class="ruta-actions">
-                <button class="btn-edit" onclick="editarRuta(${ruta.id})">Editar</button>
-                <button class="btn-delete" onclick="eliminarRuta(${ruta.id})">Eliminar</button>
+            <div class="ruta-content">
+                <h3 onclick="verDetalleRuta(${ruta.id})" style="cursor: pointer;">${ruta.nombre}</h3>
+                <p class="ruta-recorrido">${ruta.recorrido}</p>
+                <div class="ruta-info">
+                    <p><strong>Barrio:</strong> ${ruta.barrio}</p>
+                    <p><strong>Distancia:</strong> ${ruta.distancia} km</p>
+                    <p><strong>Superficie:</strong> ${ruta.superficie}</p>
+                    <p><strong>Dificultad:</strong> ${ruta.dificultad}</p>
+                </div>
+                <button class="btn-ver-detalle" onclick="verDetalleRuta(${ruta.id})">Ver Detalles</button>
+                <button class="${claseBoton}" onclick="marcarRealizada(${ruta.id})">${estadoRealizada}</button>
+                <div class="ruta-actions">
+                    <button class="btn-edit" onclick="editarRuta(${ruta.id})">Editar</button>
+                    <button class="btn-delete" onclick="eliminarRuta(${ruta.id})">Eliminar</button>
+                </div>
             </div>
         `;
         
@@ -130,6 +226,14 @@ function editarRuta(id) {
 
 function agregarRuta() {
     alert('Formulario de agregar ruta en desarrollo');
+}
+
+function marcarRealizada(id) {
+    const ruta = rutas.find(r => r.id === id);
+    if (ruta) {
+        ruta.realizada = !ruta.realizada;
+        filtrarRutas();
+    }
 }
 
 document.getElementById('btnFiltrar').addEventListener('click', filtrarRutas);

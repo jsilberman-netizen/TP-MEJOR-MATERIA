@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Ruta - RunMap BA</title>
+    
+    <link rel="icon" type="image/png" href="logo-icon.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="RunMap BA Logo" class="logo-image">
+                <span class="logo-text">RunMap BA</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="rutas.html">Rutas</a></li>
+                <li><a href="#retos">Retos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detalle-hero" id="detalleHero">
+        </section>
+
+        <section class="detalle-section">
+            <div class="detalle-container">
+                <div class="detalle-content">
+                    <a href="rutas.html" class="btn-volver">← Volver a Rutas</a>
+                    
+                    <div id="detalleInfo">
+                    </div>
+                </div>
+
+                <div class="detalle-sidebar">
+                    <div class="info-box">
+                        <h3>Información</h3>
+                        <div id="infoRapida"></div>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Acciones</h3>
+                        <button class="btn-action-full" id="btnMarcarRealizada">Marcar como realizada</button>
+                        <button class="btn-action-full" id="btnEditarRuta">Editar Ruta</button>
+                        <button class="btn-action-full btn-danger" id="btnEliminarRuta">Eliminar Ruta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RunMap BA - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+    <script src="rutas.js"></script>
+    <script src="detalle-ruta.js"></script>
+</body>
+</html>
