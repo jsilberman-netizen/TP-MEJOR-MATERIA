@@ -1,133 +1,111 @@
 let rutas = [
     {
         id: 1,
-        nombre: "Circuito Lagos de Palermo",
-        barrio: "Palermo",
-        distancia: 6.5,
-        superficie: "Asfalto",
-        dificultad: "Fácil",
-        imagen: "running1.jpg",
-        recorrido: "Recorrido circular alrededor de los 3 lagos de Palermo. Ideal para principiantes.",
-        realizada: false
-    },
-    {
-        id: 2,
-        nombre: "Costanera Norte Completa",
-        barrio: "Costanera",
-        distancia: 12,
-        superficie: "Asfalto",
-        dificultad: "Media",
-        imagen: "running2.jpg",
-        recorrido: "Ida y vuelta por toda la Costanera Norte. Vista al río, terreno llano.",
-        realizada: false
-    },
-    {
-        id: 3,
         nombre: "Reserva Ecológica",
         barrio: "Puerto Madero",
         distancia: 8,
         superficie: "Tierra",
         dificultad: "Fácil",
-        imagen: "running3.jpg",
+        imagen: "reserva.jpeg",
         recorrido: "Circuito por senderos de tierra dentro de la reserva. Rodeado de naturaleza.",
         realizada: false
     },
     {
-        id: 4,
+        id: 2,
         nombre: "Circuito Recoleta",
         barrio: "Recoleta",
         distancia: 4.5,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running4.jpg",
+        imagen: "francia.jpg",
         recorrido: "Plaza Francia, Biblioteca Nacional y vuelta. Perfecto para entrenamientos cortos.",
         realizada: false
     },
     {
-        id: 5,
+        id: 3,
         nombre: "Bosques de Palermo - Extenso",
         barrio: "Palermo",
         distancia: 10,
         superficie: "Mixta",
         dificultad: "Media",
-        imagen: "running1.jpg",
+        imagen: "planetario.jpeg",
         recorrido: "Combina asfalto y tierra. Recorre Rosedal, Planetario y lagos completos.",
         realizada: false
     },
     {
-        id: 6,
+        id: 4,
         nombre: "Barrancas de Belgrano",
         barrio: "Belgrano",
         distancia: 5,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running2.jpg",
+        imagen: "barrancas.jpeg",
         recorrido: "Circuito por las históricas barrancas. Incluye subidas y bajadas moderadas.",
         realizada: false
     },
     {
-        id: 7,
+        id: 5,
         nombre: "Puerto Madero - Puente de la Mujer",
         barrio: "Puerto Madero",
         distancia: 7,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running3.jpg",
+        imagen: "madero.jpeg",
         recorrido: "Diques 1, 2, 3 y 4. Terreno completamente llano con excelente vista.",
         realizada: false
     },
     {
-        id: 8,
+        id: 6,
         nombre: "Parque Centenario",
         barrio: "Caballito",
         distancia: 3.5,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running4.jpg",
+        imagen: "centenario.jpeg",
         recorrido: "Vueltas al parque. Ideal para intervalos y entrenamientos de velocidad.",
         realizada: false
     },
     {
-        id: 9,
-        nombre: "Costanera Sur",
-        barrio: "Puerto Madero",
-        distancia: 6,
+        id: 7,
+        nombre: "Circuito Lagos de Palermo",
+        barrio: "Palermo",
+        distancia: 6.5,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running1.jpg",
-        recorrido: "Desde Puerto Madero hasta la Reserva Ecológica por la costanera.",
+        imagen: "palermo.jpeg",
+        recorrido: "Recorrido circular alrededor de los 3 lagos de Palermo. Ideal para principiantes.",
         realizada: false
     },
     {
-        id: 10,
-        nombre: "Circuito Parque Tres de Febrero",
-        barrio: "Palermo",
-        distancia: 8.5,
+        id: 8,
+        nombre: "Costanera Norte Completa",
+        barrio: "Costanera",
+        distancia: 12,
         superficie: "Asfalto",
         dificultad: "Media",
-        imagen: "running2.jpg",
-        recorrido: "Gran circuito que incluye Rosedal, Planetario, Lagos y Hipódromo.",
+        imagen: "norte.jpeg",
+        recorrido: "Ida y vuelta por toda la Costanera Norte. Vista al río, terreno llano.",
         realizada: false
     },
     {
-        id: 11,
+        id: 9,
         nombre: "Avenida Figueroa Alcorta",
         barrio: "Recoleta",
         distancia: 9,
         superficie: "Asfalto",
         dificultad: "Media",
-        imagen: "running3.jpg",
+        imagen: "alcorta.jpeg",
         recorrido: "Ida y vuelta desde Recoleta hasta Palermo por la avenida principal.",
         realizada: false
     },
     {
-        id: 12,
+        id: 10,
         nombre: "Ciudad Universitaria",
         barrio: "Belgrano",
         distancia: 5.5,
         superficie: "Asfalto",
         dificultad: "Fácil",
-        imagen: "running4.jpg",
+        imagen: "fadu.jpeg",
         recorrido: "Circuito universitario junto al río. Terreno llano y tranquilo.",
         realizada: false
     }
@@ -234,6 +212,10 @@ function marcarRealizada(id) {
         ruta.realizada = !ruta.realizada;
         filtrarRutas();
     }
+}
+
+function verDetalleRuta(id) {
+    window.location.href = `detalle-ruta.html?id=${id}`;
 }
 
 document.getElementById('btnFiltrar').addEventListener('click', filtrarRutas);

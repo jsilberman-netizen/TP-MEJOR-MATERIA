@@ -297,46 +297,200 @@ nav {
 }
 
 
-.shop-preview {
-    background-color: #000;
-    padding: 5rem 5%;
-}
-
-.shop-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.shop-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.shop-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-}
-
-.shop-text p {
-    font-size: 1.1rem;
-    color: #bbb;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-
 footer {
     background-color: #000;
     border-top: 2px solid #dc0000;
     padding: 2rem 5%;
     text-align: center;
     color: #888;
+}
+
+.retos-section {
+    background-color: #0a0a0a;
+    padding: 5rem 5%;
+}
+
+.retos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.retos-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dc0000;
+}
+
+.retos-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 3rem;
+}
+
+.retos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.reto-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-left: 4px solid #dc0000;
+    transition: transform 0.3s;
+}
+
+.reto-card:hover {
+    transform: translateY(-5px);
+}
+
+.reto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.reto-badge {
+    background-color: #00c853;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.reto-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.reto-card p {
+    color: #bbb;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.reto-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #999;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.contacto-section {
+    background-color: #000;
+    padding: 5rem 5%;
+}
+
+.contacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dc0000;
+}
+
+.contacto-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 3rem;
+}
+
+.contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item-contact {
+    display: flex;
+    gap: 1rem;
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-left: 4px solid #dc0000;
+}
+
+.info-item-contact .icon {
+    font-size: 2rem;
+}
+
+.info-item-contact strong {
+    display: block;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.info-item-contact p {
+    color: #bbb;
+    margin: 0;
+}
+
+.contacto-form {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-left: 4px solid #dc0000;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0a0a0a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #dc0000;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #dc0000;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #ff0000;
 }
 
 
@@ -911,28 +1065,17 @@ footer {
         font-size: 1rem;
     }
 
-    .shop-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .shop-text h2 {
+    .retos-container h2,
+    .contacto-container h2 {
         font-size: 2rem;
     }
 
-    .shop-text p {
-        font-size: 1rem;
+    .retos-grid {
+        grid-template-columns: 1fr;
     }
 
-    .shop-content {
-        direction: ltr;
-    }
-
-    .shop-image {
-        order: 1;
-    }
-
-    .shop-text {
-        order: 2;
+    .contacto-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
