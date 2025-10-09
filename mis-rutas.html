@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Rutas Deseadas - RunMap BA</title>
+    
+    <link rel="icon" type="image/png" href="logo-icon.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="RunMap BA Logo" class="logo-image">
+                <span class="logo-text">RunMap BA</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="rutas.html">Rutas</a></li>
+                <li><a href="index.html#retos">Retos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mis-rutas-section">
+            <div class="mis-rutas-container">
+                <a href="rutas.html" class="btn-volver">← Volver a Rutas</a>
+                
+                <div class="mis-rutas-header">
+                    <h1>Mis Rutas Deseadas</h1>
+                    <p>Creá y gestioná tu lista personalizada de rutas para correr</p>
+                </div>
+
+                <div class="crud-container">
+                    <div class="form-card">
+                        <h2 id="formTitle">Agregar Nueva Ruta</h2>
+                        
+                        <form id="formRuta">
+                            <input type="hidden" id="rutaId" value="">
+                            
+                            <div class="form-group">
+                                <label for="nombre">Nombre de la Ruta *</label>
+                                <input type="text" id="nombre" required placeholder="Ej: Mi Ruta Favorita">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="barrio">Barrio *</label>
+                                    <select id="barrio" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="Palermo">Palermo</option>
+                                        <option value="Puerto Madero">Puerto Madero</option>
+                                        <option value="Recoleta">Recoleta</option>
+                                        <option value="Belgrano">Belgrano</option>
+                                        <option value="Costanera">Costanera</option>
+                                        <option value="Caballito">Caballito</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="distancia">Distancia (km) *</label>
+                                    <input type="number" id="distancia" step="0.1" min="0.1" required placeholder="6.5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="superficie">Superficie *</label>
+                                    <select id="superficie" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="Asfalto">Asfalto</option>
+                                        <option value="Tierra">Tierra</option>
+                                        <option value="Mixta">Mixta</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dificultad">Dificultad *</label>
+                                    <select id="dificultad" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="Fácil">Fácil</option>
+                                        <option value="Media">Media</option>
+                                        <option value="Difícil">Difícil</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="recorrido">Descripción *</label>
+                                <textarea id="recorrido" rows="3" required placeholder="Describe el recorrido..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imagen">Imagen *</label>
+                                <input type="text" id="imagen" required placeholder="nombre-imagen.jpg">
+                                <small>La imagen debe estar en tu carpeta del proyecto</small>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="submit" class="btn-save" id="btnGuardar">Guardar Ruta</button>
+                                <button type="button" class="btn-cancel-form" id="btnCancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="lista-card">
+                        <h2>Mi Lista de Rutas</h2>
+                        <p class="lista-subtitle" id="contadorRutas">0 rutas en tu lista</p>
+                        
+                        <div id="misRutasGrid" class="mis-rutas-grid">
+                            <p class="empty-state">Aún no tenés rutas en tu lista. ¡Agregá la primera!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RunMap BA - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+    <script src="mis-rutas.js"></script>
+</body>
+</html>

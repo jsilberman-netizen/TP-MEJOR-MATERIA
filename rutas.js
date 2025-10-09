@@ -203,7 +203,7 @@ function editarRuta(id) {
 }
 
 function agregarRuta() {
-    alert('Formulario de agregar ruta en desarrollo');
+    window.location.href = 'agregar-ruta.html';
 }
 
 function marcarRealizada(id) {
